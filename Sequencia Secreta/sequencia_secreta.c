@@ -14,8 +14,8 @@ int numeros_da_sequencia(int arr[],int);
 
 int main(){
     int tamanho_array,numero, qtd_numeros = 0;
-    
-	FILE *file  =  fopen("input.txt", "r");
+    //input
+	FILE *file  =  fopen("input3.txt", "r");
 	
 	if(file == NULL){
 		printf("Erro ao ler o arquivo");		
@@ -30,7 +30,7 @@ int main(){
 		}
 	
 		fclose(file);
-		
+		//output
 		qtd_numeros = numeros_da_sequencia(array,tamanho_array);
 		printf("%d", qtd_numeros);
 	}
@@ -47,7 +47,7 @@ Pilha criarPilha(){
 
 void push(Pilha* stack, int item){
 	
-	if(stack->topo != MaxPilha - 1){
+	if(stack->topo < MaxPilha){
 		stack->array[stack->topo] = item;
 		stack->topo++;
 	}
