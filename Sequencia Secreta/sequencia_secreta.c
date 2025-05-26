@@ -1,6 +1,5 @@
 #define MaxPilha 500
 #include <stdio.h>
-#include <stdlib.h>
 
 typedef struct{
 	int topo;
